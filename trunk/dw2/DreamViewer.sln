@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamViewer", "DreamViewer.csproj", "{37877BFE-B743-4B4F-9452-AA32134BB2FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowComponent", "FlowComponent\FlowComponent.csproj", "{F26592D5-D0C2-4A3B-A520-CC1A2B817AEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37877BFE-B743-4B4F-9452-AA32134BB2FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37877BFE-B743-4B4F-9452-AA32134BB2FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37877BFE-B743-4B4F-9452-AA32134BB2FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37877BFE-B743-4B4F-9452-AA32134BB2FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F26592D5-D0C2-4A3B-A520-CC1A2B817AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26592D5-D0C2-4A3B-A520-CC1A2B817AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F26592D5-D0C2-4A3B-A520-CC1A2B817AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F26592D5-D0C2-4A3B-A520-CC1A2B817AEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
