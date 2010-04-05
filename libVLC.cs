@@ -235,7 +235,9 @@ namespace VLCTestApp
         [DllImport("libvlc")]
         static extern int libvlc_video_get_width(IntPtr p_input, ref libvlc_exception_t p_exception);
         [DllImport("libvlc")]
-        static extern int libvlc_video_get_height(IntPtr p_input, ref libvlc_exception_t p_exception);
+        static extern void libvlc_video_take_snapshot(IntPtr p_input, string Name, int w,int h, ref libvlc_exception_t p_exception);
+        [DllImport("libvlc")]
+        static extern int libvlc_video_get_height(IntPtr p_input,ref libvlc_exception_t p_exception);
         [DllImport("libvlc")]
         static extern void libvlc_exception_init(out libvlc_exception_t p_exception);
         [DllImport("libvlc")]
@@ -1150,7 +1152,6 @@ namespace VLCTestApp
             // OK
             return Error.Success;
         }
-
         /// -------------------------------------------------------------------
         /// <summary>
         /// Method name      :   SetVariable

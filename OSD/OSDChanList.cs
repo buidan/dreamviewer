@@ -13,6 +13,12 @@ namespace VLCTestApp.OSD
         public OSDChanList()
         {
             InitializeComponent();
+            flowControl1.Load("cache");
+        }
+
+        private void elementHost1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+
         }
     }
 }

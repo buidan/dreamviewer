@@ -30,69 +30,62 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinLircSettingsDlg));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.wlPort = new System.Windows.Forms.TextBox();
+            this.wlURI = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.wlCm = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.wlCi = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.wlFs = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.wlPc = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.wlNc = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.epgURI = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.rtmpURI = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.wlPort);
+            this.groupBox1.Controls.Add(this.wlURI);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(5, 4);
+            this.groupBox1.Location = new System.Drawing.Point(5, 93);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(335, 62);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "WinLirc Server Settings:";
             // 
-            // SaveButton
+            // wlPort
             // 
-            this.SaveButton.Location = new System.Drawing.Point(160, 266);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(87, 22);
-            this.SaveButton.TabIndex = 1;
-            this.SaveButton.Text = "Save";
-            this.SaveButton.UseVisualStyleBackColor = true;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            this.wlPort.Location = new System.Drawing.Point(259, 27);
+            this.wlPort.Name = "wlPort";
+            this.wlPort.Size = new System.Drawing.Size(49, 20);
+            this.wlPort.TabIndex = 3;
+            this.wlPort.Text = "8765";
             // 
-            // CloseButton
+            // wlURI
             // 
-            this.CloseButton.Location = new System.Drawing.Point(253, 266);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(87, 22);
-            this.CloseButton.TabIndex = 2;
-            this.CloseButton.Text = "Close";
-            this.CloseButton.UseVisualStyleBackColor = true;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Address:";
+            this.wlURI.Location = new System.Drawing.Point(66, 27);
+            this.wlURI.Name = "wlURI";
+            this.wlURI.Size = new System.Drawing.Size(152, 20);
+            this.wlURI.TabIndex = 2;
+            this.wlURI.Text = "localhost";
             // 
             // label2
             // 
@@ -103,126 +96,62 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Port:";
             // 
-            // textBox1
+            // label1
             // 
-            this.textBox1.Location = new System.Drawing.Point(66, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "localhost";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Address:";
             // 
-            // textBox2
+            // SaveButton
             // 
-            this.textBox2.Location = new System.Drawing.Point(259, 27);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(49, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "8765";
+            this.SaveButton.Location = new System.Drawing.Point(160, 355);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(87, 22);
+            this.SaveButton.TabIndex = 1;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(253, 355);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(87, 22);
+            this.CloseButton.TabIndex = 2;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.wlCm);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.wlCi);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.wlFs);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.wlPc);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.wlNc);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(6, 72);
+            this.groupBox2.Location = new System.Drawing.Point(6, 161);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(333, 188);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Remote mapping";
             // 
-            // textBox3
+            // wlCm
             // 
-            this.textBox3.Location = new System.Drawing.Point(145, 44);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(151, 20);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.Text = "nextChan";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 47);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Next Channel:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(179, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "WinLirc Code";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(145, 70);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(151, 20);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.Text = "prevChan";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Previous Channel:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(145, 96);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(151, 20);
-            this.textBox5.TabIndex = 9;
-            this.textBox5.Text = "fullScreen";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(63, 99);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Full Screen:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(145, 122);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(151, 20);
-            this.textBox6.TabIndex = 11;
-            this.textBox6.Text = "chanInfo";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(56, 125);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 13);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Channel Info:";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(145, 148);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(151, 20);
-            this.textBox7.TabIndex = 13;
-            this.textBox7.Text = "chanMenu";
+            this.wlCm.Location = new System.Drawing.Point(145, 148);
+            this.wlCm.Name = "wlCm";
+            this.wlCm.Size = new System.Drawing.Size(151, 20);
+            this.wlCm.TabIndex = 13;
+            this.wlCm.Text = "chanMenu";
             // 
             // label8
             // 
@@ -233,11 +162,136 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Channel Menu:";
             // 
+            // wlCi
+            // 
+            this.wlCi.Location = new System.Drawing.Point(145, 122);
+            this.wlCi.Name = "wlCi";
+            this.wlCi.Size = new System.Drawing.Size(151, 20);
+            this.wlCi.TabIndex = 11;
+            this.wlCi.Text = "chanInfo";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(56, 125);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Channel Info:";
+            // 
+            // wlFs
+            // 
+            this.wlFs.Location = new System.Drawing.Point(145, 96);
+            this.wlFs.Name = "wlFs";
+            this.wlFs.Size = new System.Drawing.Size(151, 20);
+            this.wlFs.TabIndex = 9;
+            this.wlFs.Text = "fullScreen";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(63, 99);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Full Screen:";
+            // 
+            // wlPc
+            // 
+            this.wlPc.Location = new System.Drawing.Point(145, 70);
+            this.wlPc.Name = "wlPc";
+            this.wlPc.Size = new System.Drawing.Size(151, 20);
+            this.wlPc.TabIndex = 7;
+            this.wlPc.Text = "prevChan";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(34, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Previous Channel:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(179, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "WinLirc Code";
+            // 
+            // wlNc
+            // 
+            this.wlNc.Location = new System.Drawing.Point(145, 44);
+            this.wlNc.Name = "wlNc";
+            this.wlNc.Size = new System.Drawing.Size(151, 20);
+            this.wlNc.TabIndex = 4;
+            this.wlNc.Text = "nextChan";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(52, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Next Channel:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.epgURI);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.rtmpURI);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Location = new System.Drawing.Point(6, 2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(334, 84);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Streaming Server:";
+            // 
+            // epgURI
+            // 
+            this.epgURI.Location = new System.Drawing.Point(93, 50);
+            this.epgURI.Name = "epgURI";
+            this.epgURI.Size = new System.Drawing.Size(202, 20);
+            this.epgURI.TabIndex = 3;
+            this.epgURI.Text = "http://127.0.0.1/epg/epg.php";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(34, 53);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 13);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "EPG List:";
+            // 
+            // rtmpURI
+            // 
+            this.rtmpURI.Location = new System.Drawing.Point(93, 21);
+            this.rtmpURI.Name = "rtmpURI";
+            this.rtmpURI.Size = new System.Drawing.Size(202, 20);
+            this.rtmpURI.TabIndex = 1;
+            this.rtmpURI.Text = "rtsp://127.0.0.1/lista";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "RTSP stream:";
+            // 
             // WinLircSettingsDlg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 293);
+            this.ClientSize = new System.Drawing.Size(348, 386);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.SaveButton);
@@ -245,12 +299,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WinLircSettingsDlg";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "WinLircSettingsDlg";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Settings";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -260,21 +316,26 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button CloseButton;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox wlPort;
+        private System.Windows.Forms.TextBox wlURI;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox wlNc;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox wlCm;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox wlCi;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox wlFs;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox wlPc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox epgURI;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox rtmpURI;
+        private System.Windows.Forms.Label label9;
     }
 }

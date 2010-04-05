@@ -28,59 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.chanList = new System.Windows.Forms.ListBox();
+            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
+            flowControl1 = new Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.FlowControl();
             this.SuspendLayout();
             // 
-            // chanList
+            // elementHost1
             // 
-            this.chanList.BackColor = System.Drawing.Color.DimGray;
-            this.chanList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.chanList.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.chanList.ForeColor = System.Drawing.Color.White;
-            this.chanList.FormattingEnabled = true;
-            this.chanList.ItemHeight = 18;
-            this.chanList.Items.AddRange(new object[] {
-            "PRemiere",
-            "BHTV 1",
-            "PRemiere World",
-            "KAbel 1",
-            "PRemiere",
-            "BHTV 1",
-            "PRemiere World",
-            "KAbel 1",
-            "PRemiere",
-            "BHTV 1",
-            "PRemiere World",
-            "KAbel 1",
-            "PRemiere",
-            "BHTV 1",
-            "PRemiere",
-            "BHTV 1"});
-            this.chanList.Location = new System.Drawing.Point(9, 14);
-            this.chanList.Name = "chanList";
-            this.chanList.Size = new System.Drawing.Size(377, 342);
-            this.chanList.TabIndex = 0;
+            this.elementHost1.BackColor = System.Drawing.Color.White;
+            this.elementHost1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost1.Location = new System.Drawing.Point(0, 0);
+            this.elementHost1.Name = "elementHost1";
+            this.elementHost1.Size = new System.Drawing.Size(648, 390);
+            this.elementHost1.TabIndex = 0;
+            this.elementHost1.Text = "elementHost1";
+            this.elementHost1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.elementHost1_ChildChanged);
+            this.elementHost1.Child = flowControl1;
             // 
             // OSDChanList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(400, 371);
-            this.Controls.Add(this.chanList);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(648, 390);
+            this.Controls.Add(this.elementHost1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OSDChanList";
-            this.Opacity = 0.7;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OSDChanList";
             this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox chanList;
+        private System.Windows.Forms.Integration.ElementHost elementHost1;
+        public static Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.FlowControl flowControl1;
+
     }
 }

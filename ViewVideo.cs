@@ -10,6 +10,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Diagnostics;
 
 
 namespace VLCTestApp
@@ -28,6 +29,10 @@ namespace VLCTestApp
 
         [DllImport("user32.dll")]
         static extern int GetWindowText(int hWnd, StringBuilder text, int count);
+
+        [DllImport("user32.dll", CharSet=CharSet.Auto)]
+        public static extern int ShowWindow(IntPtr hWnd, int showcmd);
+
 
         private OSD.OSDChanList oc;
         private OSD.OSDInfo oi;
@@ -51,13 +56,22 @@ namespace VLCTestApp
                    // case 405: rEcordToolStripMenuItem_Click(this, null); break;
                     case 405: MessageBox.Show(isFull().ToString()); break;
                     case 406: muteToolStripMenuItem_Click(this, null);  break;
-                    case 407: if (!isFull()) channelListToolStripMenuItem_Click(this, null);
-                        else
+                    case 407:
+                        videoOnDemandList();
+                        break;
+                    case 408:
+                        flowPrevious();
+                        break;
+                    case 409:
+                        flowNext();
+                        break;
+                    case 410: if (chan_menu.Visible || oc.Visible)
                         {
-                            if (oc == null) oc = new OSD.OSDChanList();
-                            if (!oc.Visible) oc.Show(); else oc.Hide();
+                            string loc = (isFull()) ? OSD.OSDChanList.flowControl1.GetCurrImage() : flowControl1.GetCurrImage();
+                            OpenStream("rtsp://127.0.0.1/" + loc);
                         }
                         break;
+                    case 411: if (isFull()) { if (oc != null && oc.Visible) oc.Hide(); else vlc.ToggleFullscreen(); } break;
                 }
             base.WndProc(ref m);
         }
@@ -72,7 +86,7 @@ namespace VLCTestApp
             return false;
         }
 
-
+        private bool chanLoaded = false;
         private static LibVlc vlc;
 
         // Net :)
@@ -86,10 +100,6 @@ namespace VLCTestApp
             set { vlc = value; }
         }
 
-        public  void powerOff()
-        {
-            shutDownServerToolStripMenuItem_Click(this, null);
-        }
         public  void nextChan()
         {
             nextChannelToolStripMenuItem_Click(this,null);
@@ -113,10 +123,22 @@ namespace VLCTestApp
         private void loadSettings()
         {
             if (File.Exists("Settings.dat"))
-                AppSettings = (Settings.Settings)(new BinaryFormatter()).Deserialize(File.Open("Settings.dat", FileMode.Open));
+            {
+                FileStream fs;
+                AppSettings = (Settings.Settings)(new BinaryFormatter()).Deserialize(fs =File.Open("Settings.dat", FileMode.Open));
+                fs.Close();
+            }
             else MessageBox.Show("Settngs file doesn't exists");
         }
 
+        private void OpenStream(string stream)
+        {
+            vlc.Stop();
+            vlc.PlaylistClear();
+            vlc.AddTarget(stream);
+            vlc.Play();
+            if (isFull()) oc.Hide(); else chan_menu.Hide();
+        }
         private void initializHotKeys()
         {
             //37 i 39 right i left
@@ -127,6 +149,10 @@ namespace VLCTestApp
             success = RegisterHotKey(this.Handle, 405, 0, 82); // R
             success = RegisterHotKey(this.Handle, 406, 0, 77); // M 
             success = RegisterHotKey(this.Handle, 407, 0, 76); // L 
+            success = RegisterHotKey(this.Handle, 408, 0, 37);   // Left
+            success = RegisterHotKey(this.Handle, 409, 0, 39);   // Right
+            success = RegisterHotKey(this.Handle, 410, 0, 13);   // Enter
+            success = RegisterHotKey(this.Handle, 411, 0, 27);   // ESC
         }
 
         private void initializeVLC()
@@ -138,6 +164,23 @@ namespace VLCTestApp
         }
 
 
+        private void flowPrevious()
+        {
+            if (!isFull()) flowControl1.GoToPrevious(); else OSD.OSDChanList.flowControl1.GoToPrevious();
+        }
+        private void flowNext()
+        {
+            if (!isFull()) flowControl1.GoToNext(); else OSD.OSDChanList.flowControl1.GoToNext();
+        }
+        private void videoOnDemandList()
+        {
+            if (!isFull()) channelListToolStripMenuItem_Click(this, null);
+            else
+            {
+                if (oc == null) oc = new OSD.OSDChanList();
+                if (!oc.Visible) oc.Show(); else oc.Hide();
+            }
+        }
         private void btnSchliessen_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -145,24 +188,64 @@ namespace VLCTestApp
 
         private void ViewVideo_Load(object sender, EventArgs e)
         {
+            GetEPG();
+            chan_menu.Hide();
             InitializeWinLirc();
-
-        /*    vlc.PlaylistClear();
-            vlc.AddTarget("D:\\Projekti\\Filmovi\\oneWay.wmv");
-            vlc.Play(); */
+          
+            vlc.PlaylistClear();
+            vlc.AddTarget(AppSettings.RtmpAddress);
+            vlc.Play(); 
 
             Size formrect = SystemInformation.PrimaryMonitorSize;
             //oi.Location = new Point((formrect.Height / 2)-(oi.Height/2), formrect.Width - oi.Width +70);
 
         }
 
+        private void GetEPG()
+        {
+            try
+            {
+                if (Directory.Exists("cache"))
+                {
+                    if (Directory.Exists("temp")) Directory.Delete("temp", true);
+                    Directory.Move("cache", "temp");
+                }
+                Directory.CreateDirectory("cache");
+                StreamReader sr = new StreamReader((new WebClient()).OpenRead(AppSettings.EpgAddress));
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    if (line.StartsWith("\""))
+                    {
+                        string[] part = line.Split('\\');
+                        string video = part[part.Length - 1].Split('\"')[0];
+
+                        if (File.Exists("temp\\" + video + ".jpg"))
+                        {
+                            File.Move("temp\\" + video + ".jpg", "cache\\" + video + ".jpg");
+                        }
+                        else
+                        {
+                            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo(vlc.VlcInstallDir + "\\vlc.exe");
+                            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                            startInfo.Arguments = "-V image --start-time 0 --stop-time 1 --image-out-format jpg --image-out-ratio 24 --image-out-prefix cache/" + video + " --image-out-replace rtsp://127.0.0.1/" + video + " vlc:quit";
+                            Process.Start(startInfo);
+                        }
+                    }
+                }
+                sr.Close();
+            }
+            catch (Exception e) { MessageBox.Show(e.Message); }
+            
+        }
+
         private void InitializeWinLirc()
         {
-            string addr = "localhost";
-            int port= 8765;
+            string addr = AppSettings.Addr;
+            int port= Convert.ToInt32(AppSettings.Port);
             winLircControl.Connect(ref addr, ref port);
             winLircControl.ReceiveIR +=new AxWinLIRCClientControl.__WinLIRC_ReceiveIREventHandler(winLircControl_ReceiveIR);
-            winLircControl.Error += new AxWinLIRCClientControl.__WinLIRC_ErrorEventHandler(winLircControl_Error);
+       //     winLircControl.Error += new AxWinLIRCClientControl.__WinLIRC_ErrorEventHandler(winLircControl_Error);
         }
 
         private void winLircControl_Error(object sender, AxWinLIRCClientControl.__WinLIRC_ErrorEvent e)
@@ -172,9 +255,29 @@ namespace VLCTestApp
 
         private void winLircControl_ReceiveIR(object sender, AxWinLIRCClientControl.__WinLIRC_ReceiveIREvent e)
         {
-            switch (e.sRemote)
+            switch (e.sButton)
             {
-                case "nextChan": break;
+                case "ok": 
+                    break;
+                case "menu":
+                    videoOnDemandList();
+                    break;
+                case "left":
+                    flowPrevious();
+                    break;
+                case "right":
+                    flowNext();
+                    break;
+                case "up": 
+                    break;
+                case "down": 
+                    break;
+                case "red": 
+
+                    break;
+                case "green": break;
+                case "yellow": break;
+                case "blue": break;
             }
         }
 
@@ -220,7 +323,7 @@ namespace VLCTestApp
 
         private void channelInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            osd_Info.Visible = (osd_Info.Visible) ? false : true;
+           // osd_Info.Visible = (osd_Info.Visible) ? false : true;
         }
 
         private void controlToolStripMenuItem_Click(object sender, EventArgs e)
@@ -229,25 +332,27 @@ namespace VLCTestApp
 
         private void nextChannelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!Osd_ChanList.Visible)
+         /*  if (!Osd_ChanList.Visible)
                 MessageBox.Show("Test Next Chan");
             else if (Osd_ChanList.SelectedIndex !=0)
-                    Osd_ChanList.SelectedItem = Osd_ChanList.Items[Osd_ChanList.SelectedIndex - 1];
+                    Osd_ChanList.SelectedItem = Osd_ChanList.Items[Osd_ChanList.SelectedIndex - 1]; */
+            vlc.PlaylistNext();
         }
 
         private void previuseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!Osd_ChanList.Visible)
+            vlc.PlaylistPrevious();
+           /* if (!Osd_ChanList.Visible)
                 MessageBox.Show("Test Prev Chan");
             else if (Osd_ChanList.SelectedIndex != Osd_ChanList.Items.Count-1)
-                Osd_ChanList.SelectedItem = Osd_ChanList.Items[Osd_ChanList.SelectedIndex + 1];
+                Osd_ChanList.SelectedItem = Osd_ChanList.Items[Osd_ChanList.SelectedIndex + 1]; */
         }
 
         private void rEcordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (info_Recording.Text == "R")
+       /*     if (info_Recording.Text == "R")
                 info_Recording.Text = "";
-            else info_Recording.Text = "R";
+            else info_Recording.Text = "R"; */
             
         }
 
@@ -256,14 +361,10 @@ namespace VLCTestApp
             vlc.VolumeMute();
         }
 
-        private void shutDownServerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Test ShDown");
-        }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("DreamViewer\r\nby Teo Eterovic");
+            MessageBox.Show("DreamViewer\r\nby Teo Eterovic && Mladen Drmac");
         }
 
 
@@ -282,6 +383,10 @@ namespace VLCTestApp
             success = RegisterHotKey(this.Handle, 405, 0, 82);
             success = RegisterHotKey(this.Handle, 406, 0, 77);
             success = RegisterHotKey(this.Handle, 407, 0, 76);
+            success = RegisterHotKey(this.Handle, 408, 0, 37);   // Left
+            success = RegisterHotKey(this.Handle, 409, 0, 39);   // Right
+            success = RegisterHotKey(this.Handle, 410, 0, 13);   // Enter
+            success = RegisterHotKey(this.Handle, 411, 0, 27);   // ESC
         }
 
         private void ViewVideo_Deactivate(object sender, EventArgs e)
@@ -298,7 +403,11 @@ namespace VLCTestApp
                 UnregisterHotKey(this.Handle, 404);
                 UnregisterHotKey(this.Handle, 405);
                 UnregisterHotKey(this.Handle, 406);
-                UnregisterHotKey(this.Handle, 407); 
+                UnregisterHotKey(this.Handle, 407);
+                UnregisterHotKey(this.Handle, 408);   // Left
+                UnregisterHotKey(this.Handle, 409);   // Right
+                UnregisterHotKey(this.Handle, 410);   // Enter
+                UnregisterHotKey(this.Handle, 411);   // ESC
             }
         }
 
@@ -313,16 +422,6 @@ namespace VLCTestApp
             UnregisterHotKey(this.Handle, 407);
         }
 
-        private void changeAspectRatioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Test Ratio Chan");
-        }
-
-        private void videoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-
 
         private void stopRecordSToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -335,7 +434,7 @@ namespace VLCTestApp
             { 
                 System.Diagnostics.Process vlcRecorder = new System.Diagnostics.Process();
                 vlcRecorder.StartInfo.FileName = vlc.VlcInstallDir + "\\vlc.exe";
-                vlcRecorder.StartInfo.Arguments = "udp://@ --sout file/avi:" + saveFileDialog1.FileName;
+                vlcRecorder.StartInfo.Arguments = AppSettings.RtmpAddress+" --sout file/avi:" + saveFileDialog1.FileName;
                 vlcRecorder.Start();
                 MessageBox.Show("VLC media player is recording your stream(you can't watch the stream while recording !!)\nto stop recording close the VLC media player");
             }
@@ -352,15 +451,16 @@ namespace VLCTestApp
 
         private void channelListToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Osd_ChanList.Visible)
+            if (!chanLoaded) { flowControl1.Load("cache"); chanLoaded = true; }
+            if (chan_menu.Visible)
             {
-                Osd_ChanList.Hide();
+                chan_menu.Hide();
             }
             else
             {
-                Osd_ChanList.SelectedItem = Osd_ChanList.Items[0];
-                Osd_ChanList.Show();
-            }
+              //  Osd_ChanList.SelectedItem = Osd_ChanList.Items[0];
+                chan_menu.Show();
+            } 
         }
 
         private void sendToolStripMenuItem_Click(object sender, EventArgs e)
@@ -368,11 +468,18 @@ namespace VLCTestApp
             MessageBox.Show("Test");
         }
 
-        private void winLircSetupToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void winLircSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Settings.WinLircSettingsDlg dlg = new VLCTestApp.Settings.WinLircSettingsDlg();
             dlg.Show();
         }
+
+        private void mediaStramsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenStream(AppSettings.RtmpAddress);
+        }
+
 
     }
 }
