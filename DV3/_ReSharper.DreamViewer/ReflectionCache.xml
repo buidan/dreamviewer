@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Assemblies Version="1073741836">
+  <Assembly Name="PresentationCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Image="7ed81608-babc-44b4-b40a-742350b738ad" Timestamp="633275242920000000" XmlDocIndexTimestamp="633264999620000000" />
+  <Assembly Name="PresentationFramework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Image="d67d56fb-e6ba-4385-8e98-14ac19064de6" Timestamp="633275242940000000" XmlDocIndexTimestamp="633264999640000000" />
+  <Assembly Name="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Image="b008ee52-c7d5-428f-acbc-5131e990ff8d" Timestamp="633300517580000000" XmlDocIndexTimestamp="633264999640000000" />
+  <Assembly Name="UIAutomationProvider, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Image="d6d9109d-22c8-4aec-b1d5-27687c4f48f9" Timestamp="633275242980000000" XmlDocIndexTimestamp="633259819780000000" />
+  <Assembly Name="UsbLibrary, Version=1.0.3330.1947, Culture=neutral" Image="b47baca7-1815-41d3-9958-19b4d094fd46" Timestamp="633699938944218750" XmlDocIndexTimestamp="633700396093281250" />
+  <Assembly Name="VLanControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3ac025062bb38185" Image="6177cf9b-e40a-47f2-8733-ec7d78acaa0f" Timestamp="633365423996406250" />
+  <Assembly Name="WindowsBase, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Image="55bb924d-ef9c-4949-b921-a919848964a4" Timestamp="633275242960000000" XmlDocIndexTimestamp="633264999720000000" />
+  <Assembly Name="WindowsFormsIntegration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Image="250d986b-026c-408e-a839-2c298a14d6e0" Timestamp="633275242980000000" XmlDocIndexTimestamp="633259819780000000" />
+  <Assembly Name="AxInterop.AXVLC, Version=1.0.0.0" Image="c43f5dd5-887e-4dd6-9875-84642f2a0de1" Timestamp="633692164406093750" />
+  <Assembly Name="AxInterop.WinLIRCClientControl, Version=4.0.0.0" Image="7eab6ae0-987b-4acb-9ee4-e2c335232ed5" Timestamp="633692164407968750" />
+  <Assembly Name="JetBrains.Annotations, Version=4.1.933.3, Culture=neutral, PublicKeyToken=1010a0d8d6380325" Image="3919ca9f-9f94-49d4-a0d9-648b8970afca" Timestamp="633559706920000000" XmlDocIndexTimestamp="633559706920000000" />
+  <Assembly Name="Interop.AXVLC, Version=1.0.0.0" Image="93f2309e-b433-40bb-b0c6-459f5fa70813" Timestamp="633703881923593750" />
+  <Assembly Name="Interop.WinLIRCClientControl, Version=4.0.0.0" Image="af6243c6-9389-4f4b-9166-3fa12651911a" Timestamp="633703881817187500" />
+</Assemblies>

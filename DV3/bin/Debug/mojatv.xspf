@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playlist version="1" xmlns="http://xspf.org/ns/0/">
+  <trackList>
+
+	  <track>  <title>Sky News</title>  <location>udp://@239.192.2.10:5000</location>  </track>
+	  <track>  <title>CNBC</title>  <location>udp://@239.192.2.13:5000</location>  </track>
+	  <track>  <title>Minimax</title>  <location>udp://@239.192.2.14:5000</location>  </track>
+	  <track>  <title>Eurosport</title>  <location>udp://@239.192.2.15:5000</location>  </track>
+	  <track>  <title>TRT Turk</title>  <location>udp://@239.192.2.16:5000</location>  </track>
+	  <track>  <title>Pro7</title>  <location>udp://@239.192.2.17:5000</location>  </track>
+	  <track>  <title>Bloomberg</title>  <location>udp://@239.192.2.19:5000</location>  </track>
+	  <track>  <title>RTV Vogosca</title>  <location>udp://@239.192.2.20:5000</location>  </track>
+	  <track>  <title>BHT</title>  <location>udp://@239.192.2.207:5000</location>  </track>
+	  <track>  <title>FTV</title>  <location>udp://@239.192.2.208:5000</location>  </track>
+	  <track>  <title>TV SA</title>  <location>udp://@239.192.2.209:5000</location>  </track>
+	  <track>  <title>ZDF</title>  <location>udp://@239.192.2.21:5000</location>  </track>
+	  <track>  <title>RTM</title>  <location>udp://@239.192.2.210:5000</location>  </track>
+	  <track>  <title>?</title>  <location>udp://@239.192.2.212:5000</location>  </track>
+	  <track>  <title>?</title>  <location>udp://@239.192.2.67:5000</location>  </track>
+	  <track>  <title>?</title>  <location>udp://@239.192.2.69:5000</location>  </track>
+	  <track>  <title>XD?</title>  <location>udp://@239.192.2.71:5000</location>  </track>
+	  <track>  <title>9</title>  <location>udp://@239.192.2.72:5000</location>  </track>
+	  <track>  <title>HRT2</title>  <location>udp://@239.192.2.213:5000</location>  </track>
+	  <track>  <title>Discovery World</title>  <location>udp://@239.192.2.22:5000</location>  </track>
+	  <track>  <title>AlJazeera</title>  <location>udp://@239.192.2.25:5000</location>  </track>
+	  <track>  <title>BBC Entertaiment</title>  <location>udp://@239.192.2.26:5000</location>  </track>
+	  <track>  <title>Euronews</title>  <location>udp://@239.192.2.27:5000</location>  </track>
+	  <track>  <title>Zone Reality</title>  <location>udp://@239.192.2.35:5000</location>  </track>
+	  <track>  <title>National Geographics</title>  <location>udp://@239.192.2.39:5000</location>  </track>
+	  <track>  <title>TV1000</title>  <location>udp://@239.192.2.42:5000</location>  </track>
+	  <track>  <title>RTL2</title>  <location>udp://@239.192.2.51:5000</location>  </track>
+	  <track>  <title>RTV USK</title>  <location>udp://@239.192.2.52:5000</location>  </track>
+	  <track>  <title>VOX</title>  <location>udp://@239.192.2.53:5000</location>  </track>
+	  <track>  <title>Mreza plus</title>  <location>udp://@239.192.2.54:5000</location>  </track>
+	  <track>  <title>RTV TK</title>  <location>udp://@239.192.2.56:5000</location>  </track>
+	  <track>  <title>Slon Extra</title>  <location>udp://@239.192.2.57:5000</location>  </track>
+	  <track>  <title>OTV</title>  <location>udp://@239.192.2.60:5000</location>  </track>
+	  <track>  <title>Discovery</title>  <location>udp://@239.192.2.62:5000</location>  </track>
+	  <track>  <title>Discovery travel living</title>  <location>udp://@239.192.2.63:5000</location>  </track>
+	  <track>  <title>Viasat History</title>  <location>udp://@239.192.2.64:5000</location>  </track>
+	  <track>  <title>Explorer</title>  <location>udp://@239.192.2.65:5000</location>  </track>
+	  <track>  <title>?</title>  <location>udp://@239.192.2.6:5000</location>  </track>
+	  <track>  <title>OBN</title>  <location>udp://@239.192.2.100:5000</location>  </track>
+	  <track>  <title>PINK</title>  <location>udp://@239.192.2.101:5000</location>  </track>
+	  <track>  <title>Mreza plus</title>  <location>udp://@239.192.2.102:5000</location>  </track>
+	  <track>  <title>Behar TV</title>  <location>udp://@239.192.2.104:5000</location>  </track>
+	  <track>  <title>TV Alpha</title>  <location>udp://@239.192.2.108:5000</location>  </track>
+	  <track>  <title>KISS</title>  <location>udp://@239.192.2.109:5000</location>  </track>
+	  <track>  <title>Eurosport L</title>  <location>udp://@239.192.2.128:5000</location>  </track>
+	  <track>  <title>Eurosport2 L</title>  <location>udp://@239.192.2.129:5000</location>  </track>
+	  <track>  <title>Animal planet</title>  <location>udp://@239.192.2.144:5000</location>  </track>
+  </trackList>
+</playlist>
