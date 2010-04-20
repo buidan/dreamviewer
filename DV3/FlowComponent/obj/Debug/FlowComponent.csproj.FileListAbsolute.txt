@@ -52,3 +52,12 @@ C:\Documents and Settings\SNM\Desktop\dw\Projects\new\DreamViewer2\FlowComponent
 C:\Documents and Settings\SNM\Desktop\dw\Projects\new\DreamViewer2\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.g.resources
 C:\Documents and Settings\SNM\Desktop\dw\Projects\new\DreamViewer2\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.dll
 C:\Documents and Settings\SNM\Desktop\dw\Projects\new\DreamViewer2\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.pdb
+C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\FlowComponent\bin\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.dll
+C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\FlowComponent\bin\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.pdb
+C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\FlowComponent\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\FlowComponent\obj\Debug\FlowControl.baml
+C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\FlowComponent\obj\Debug\FlowControl.g.cs
+C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent_MarkupCompile.cache
+C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.g.resources
+C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.dll
+C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.pdb
