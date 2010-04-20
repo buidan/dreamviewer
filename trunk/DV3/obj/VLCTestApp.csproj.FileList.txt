@@ -1,0 +1,16 @@
+bin\Debug\Interop.AXVLC.dll
+bin\Debug\AxInterop.AXVLC.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Interop.AXVLC.dll
+obj\Debug\AxInterop.AXVLC.dll
+obj\Debug\VLCTestApp.csproj.ResolveComReference.cache
+obj\Debug\VLCTestApp.csproj.GenerateResource.Cache
+obj\Debug\VLCTestApp.ViewVideo.resources
+obj\Debug\VLCTestApp.Properties.Resources.resources
+bin\Debug\VLCTestApp.exe
+bin\Debug\VLCTestApp.pdb
+obj\Debug\VLCTestApp.exe
+obj\Debug\VLCTestApp.pdb
+bin\Debug\DevComponents.DotNetBar2.dll
+bin\Debug\DevComponents.DotNetBar2.xml
+obj\Debug\VLCTestApp.OpenLink.resources

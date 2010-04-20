@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<channel-list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<channel number="1">
+		<name>BBC One</name>
+		<multicast ip="239.192.2.105" port="5000"/>
+	</channel>
+	<channel number="2">
+		<name>BBC Two</name>
+		<multicast ip="239.192.2.104" port="5000"/>
+	</channel>
+</channel-list>
