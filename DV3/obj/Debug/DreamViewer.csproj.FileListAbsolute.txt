@@ -143,3 +143,26 @@ C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\obj\Debug\VLCTestApp.Se
 C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\obj\Debug\VLCTestApp.ViewVideo.resources
 C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\obj\Debug\VLCTestApp.WoLDialog.resources
 C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\obj\Debug\DreamViewer.csproj.GenerateResource.Cache
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\Interop.AXVLC.dll
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\AxInterop.AXVLC.dll
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\DreamViewer.csproj.ResolveComReference.cache
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\DreamViewer.exe
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\DreamViewer.pdb
+C:\Users\kuca\Desktop\DreamViewer\bin\Debug\DreamViewer.exe
+C:\Users\kuca\Desktop\DreamViewer\bin\Debug\DreamViewer.pdb
+C:\Users\kuca\Desktop\DreamViewer\bin\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.dll
+C:\Users\kuca\Desktop\DreamViewer\bin\Debug\UsbLibrary.xml
+C:\Users\kuca\Desktop\DreamViewer\bin\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.pdb
+C:\Users\kuca\Desktop\DreamViewer\bin\Debug\Interop.AXVLC.dll
+C:\Users\kuca\Desktop\DreamViewer\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\VLCTestApp.OpenLocation.resources
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\VLCTestApp.OpenLink.resources
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\VLCTestApp.OSD.HotKeyOsdChild.resources
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\VLCTestApp.OSD.OSDChanList.resources
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\VLCTestApp.OSD.OSDInfo.resources
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\VLCTestApp.Properties.Resources.resources
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\VLCTestApp.Settings.WinLircSettingsDlg.resources
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\VLCTestApp.ViewVideo.resources
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\VLCTestApp.WoLDialog.resources
+C:\Users\kuca\Desktop\DreamViewer\obj\Debug\DreamViewer.csproj.GenerateResource.Cache

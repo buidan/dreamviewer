@@ -53,7 +53,8 @@ namespace VLCTestApp {
                     //  if (!full) channelInfoToolStripMenuItem_Click(this, null); break;
                     // case 405: rEcordToolStripMenuItem_Click(this, null); break;
                     case 405: MessageBox.Show(isFull().ToString()); break;
-                    case 406: muteToolStripMenuItem_Click(this, null); break;
+                  //  case 406: muteToolStripMenuItem_Click(this, null); break;
+                    case 406: mediaStramsToolStripMenuItem_Click(this, null); break;
                     case 407:
                         videoOnDemandList();
                         break;
@@ -90,12 +91,13 @@ namespace VLCTestApp {
             return false;
         }
 
-        private bool chanLoaded = false;
+        private bool chanLoaded = false, iptvLoaded=false;
         private static LibVlc vlc;
 
         private byte[] data = new byte[1024];
         private UsbHidPort usb = new UsbHidPort();
         private ArrayList videostore;
+        private bool isIPTV = false;
 
         public static LibVlc gEkran {
             get { return vlc; }
@@ -135,7 +137,9 @@ namespace VLCTestApp {
             vlc.PlaylistClear();
             vlc.AddTarget(stream);
             vlc.Play();
+
             if (isFull()) oc.Hide(); else chan_menu.Hide();
+            isIPTV = false;
         }
         private void initializHotKeys() {
             //37 i 39 right i left
@@ -162,10 +166,14 @@ namespace VLCTestApp {
 
 
         private void flowPrevious() {
-            if (!isFull()) flowControl1.GoToPrevious(); else OSD.OSDChanList.flowControl1.GoToPrevious();
+            if (isIPTV) 
+                flowControl2.GoToPrevious();
+            else flowControl1.GoToPrevious();
         }
         private void flowNext() {
-            if (!isFull()) flowControl1.GoToNext(); else OSD.OSDChanList.flowControl1.GoToNext();
+            if (isIPTV) 
+                flowControl2.GoToNext();
+            else flowControl1.GoToNext(); 
         }
         private void videoOnDemandList() {
             if (!isFull()) {
@@ -184,7 +192,7 @@ namespace VLCTestApp {
         private void ViewVideo_Load(object sender, EventArgs e) {
             GetEPG();
             chan_menu.Hide();
-
+            iptv_menu.Hide();
 
             vlc.PlaylistClear();
             vlc.AddTarget(AppSettings.RtmpAddress);
@@ -325,6 +333,12 @@ namespace VLCTestApp {
                 else {
                     string[] filenames = Directory.GetFiles("cache");
                     foreach (string filename in filenames) {
+                        File.Delete(filename);
+                    }
+
+                    filenames = Directory.GetFiles("cache\\tn");
+                    foreach (string filename in filenames)
+                    {
                         File.Delete(filename);
                     }
                 }
@@ -536,7 +550,7 @@ namespace VLCTestApp {
         }
 
         private void channelListToolStripMenuItem_Click(object sender, EventArgs e) {
-            if (!chanLoaded) { flowControl1.Load("cache"); chanLoaded = true; }
+            if (!chanLoaded) { flowControl1.Load("cache", "*.jpg"); chanLoaded = true; }
             if (chan_menu.Visible) {
                 chan_menu.Hide();
             }
@@ -558,16 +572,36 @@ namespace VLCTestApp {
 
         private void flowOK() {
             try {
+                if (iptv_menu.Visible)
+                {
+                    string loc = flowControl2.GetCurrImage();
+                    OpenStream("udp://@" + loc + ":5000");
+                }
                 if (chan_menu.Visible || oc.Visible) {
-                    string loc = (isFull()) ? OSD.OSDChanList.flowControl1.GetCurrImage() : flowControl1.GetCurrImage();
+                    string loc = (isFull())
+                         ? OSD.OSDChanList.flowControl1.GetCurrImage()
+                         : flowControl1.GetCurrImage();
+                       
                     OpenStream(AppSettings.RtmpAddress + "/movie/" + loc + ".film");
                 }
             }
             catch (Exception) { }
         }
         private void mediaStramsToolStripMenuItem_Click(object sender, EventArgs e) {
-            OpenStream(AppSettings.RtmpAddress);
-        }
 
+            //OpenStream(AppSettings.RtmpAddress);
+            if (!iptvLoaded) { flowControl2.Load("chan_cache", "*.png"); iptvLoaded = true; }
+            if (iptv_menu.Visible)
+            {
+                isIPTV = false;
+                iptv_menu.Hide();
+            }
+            else
+            {
+                //  Osd_ChanList.SelectedItem = Osd_ChanList.Items[0];
+                isIPTV = true;
+                iptv_menu.Show();
+            }
+        }
     }
 }

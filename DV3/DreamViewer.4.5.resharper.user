@@ -1,0 +1,79 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer>
+      <setting name="UsedSolutionBuilderID">0</setting>
+    </integer>
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="String" priority="0" />
+      <Item value="new" priority="0" />
+      <Item value="true" priority="0" />
+      <Item value="private" priority="0" />
+      <Item value="bool" priority="0" />
+      <Item value="false" priority="1" />
+      <Item value="if" priority="0" />
+      <Item value="isIPTV" priority="1" />
+      <Item value="mediaStramsToolStripMenuItem_Click" priority="0" />
+      <Item value="string" priority="2" />
+      <Item value="StringReader" priority="0" />
+      <Item value="type" priority="0" />
+      <Item value="else" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Integration.ElementHost">
+      <Item value="Hide" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/d:OSD/f:OSDChanList.cs" caret="368" fromTop="15" />
+      <File id="F26592D5-D0C2-4A3B-A520-CC1A2B817AEE/f:FlowControl.xaml.cs" caret="2420" fromTop="9" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="17729" fromTop="26" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="17645" fromTop="5" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="17937" fromTop="5" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="18577" fromTop="5" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="372" fromTop="5" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="3268" fromTop="5" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="12245" fromTop="5" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="24010" fromTop="26" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="23814" fromTop="21" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="85" fromTop="0" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="4045" fromTop="10" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="23312" fromTop="15" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="5468" fromTop="18" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="2291" fromTop="20" />
+      <File id="F26592D5-D0C2-4A3B-A520-CC1A2B817AEE/f:FlowControl.xaml.cs" caret="1859" fromTop="50" />
+      <File id="F26592D5-D0C2-4A3B-A520-CC1A2B817AEE/f:FlowControl.xaml.cs" caret="2139" fromTop="54" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/d:OSD/f:OSDChanList.cs" caret="377" fromTop="15" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="22111" fromTop="18" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="13260" fromTop="23" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="13062" fromTop="16" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="3830" fromTop="90" />
+      <File id="F26592D5-D0C2-4A3B-A520-CC1A2B817AEE/f:FlowControl.xaml.cs" caret="1953" fromTop="28" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="24081" fromTop="18" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="23850" fromTop="23" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="24037" fromTop="29" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="7654" fromTop="16" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="23140" fromTop="11" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="23359" fromTop="16" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="22987" fromTop="8" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="6807" fromTop="10" />
+      <File id="37877BFE-B743-4B4F-9452-AA32134BB2FC/f:ViewVideo.cs" caret="6972" fromTop="15" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+</Configuration>

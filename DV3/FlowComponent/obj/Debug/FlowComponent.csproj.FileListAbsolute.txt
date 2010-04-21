@@ -61,3 +61,12 @@ C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\FlowComponent\obj\Debug
 C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.g.resources
 C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.dll
 C:\Documents and Settings\SNM\Desktop\dw\Projects\DV_SVN\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.pdb
+C:\Users\kuca\Desktop\DreamViewer\FlowComponent\bin\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.dll
+C:\Users\kuca\Desktop\DreamViewer\FlowComponent\bin\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.pdb
+C:\Users\kuca\Desktop\DreamViewer\FlowComponent\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\kuca\Desktop\DreamViewer\FlowComponent\obj\Debug\FlowControl.baml
+C:\Users\kuca\Desktop\DreamViewer\FlowComponent\obj\Debug\FlowControl.g.cs
+C:\Users\kuca\Desktop\DreamViewer\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent_MarkupCompile.cache
+C:\Users\kuca\Desktop\DreamViewer\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.g.resources
+C:\Users\kuca\Desktop\DreamViewer\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.dll
+C:\Users\kuca\Desktop\DreamViewer\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.pdb
