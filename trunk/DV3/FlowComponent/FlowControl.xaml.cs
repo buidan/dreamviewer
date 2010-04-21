@@ -52,12 +52,15 @@ namespace Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent
         {
             InitializeComponent();
         }
-        public void Load(string imagePath)
+
+
+        public void Load(string imagePath, string type)
         {
+            index = 0;
             coverList.Clear();
             var imageDir = new DirectoryInfo(imagePath);
             int doneImages = 0;
-            foreach (FileInfo image in imageDir.GetFiles("*.jpg"))
+            foreach (FileInfo image in imageDir.GetFiles(type))
             {
                 var cover = new Cover(image.FullName, doneImages++);
                 coverList.Add(cover);

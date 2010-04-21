@@ -63,6 +63,8 @@ namespace VLCTestApp
             this.ekran = new System.Windows.Forms.PictureBox();
             this.chan_menu = new System.Windows.Forms.Integration.ElementHost();
             this.flowControl1 = new Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.FlowControl();
+            this.iptv_menu = new System.Windows.Forms.Integration.ElementHost();
+            this.flowControl2 = new Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.FlowControl();
             this.contextMenuStrip1.SuspendLayout();
             this.VideoMenu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -84,12 +86,12 @@ namespace VLCTestApp
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tEESSTTtToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(132, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(124, 26);
             // 
             // tEESSTTtToolStripMenuItem
             // 
             this.tEESSTTtToolStripMenuItem.Name = "tEESSTTtToolStripMenuItem";
-            this.tEESSTTtToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.tEESSTTtToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.tEESSTTtToolStripMenuItem.Text = "TEESSTTt";
             // 
             // VideoMenu
@@ -98,19 +100,19 @@ namespace VLCTestApp
             this.infoToolStripMenuItem,
             this.fullscreenStrip});
             this.VideoMenu.Name = "contextMenuStrip1";
-            this.VideoMenu.Size = new System.Drawing.Size(173, 48);
+            this.VideoMenu.Size = new System.Drawing.Size(169, 48);
             // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.infoToolStripMenuItem.Text = "Info";
             // 
             // fullscreenStrip
             // 
             this.fullscreenStrip.Name = "fullscreenStrip";
             this.fullscreenStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.fullscreenStrip.Size = new System.Drawing.Size(172, 22);
+            this.fullscreenStrip.Size = new System.Drawing.Size(168, 22);
             this.fullscreenStrip.Text = "FullScreen";
             // 
             // menuStrip1
@@ -125,7 +127,7 @@ namespace VLCTestApp
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(564, 21);
+            this.menuStrip1.Size = new System.Drawing.Size(564, 23);
             this.menuStrip1.TabIndex = 33;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -141,14 +143,14 @@ namespace VLCTestApp
             this.fileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.fileToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 17);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 19);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // OpenNEt
             // 
             this.OpenNEt.Name = "OpenNEt";
             this.OpenNEt.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.OpenNEt.Size = new System.Drawing.Size(193, 22);
+            this.OpenNEt.Size = new System.Drawing.Size(194, 22);
             this.OpenNEt.Text = "Open Network";
             this.OpenNEt.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -156,31 +158,31 @@ namespace VLCTestApp
             // 
             this.openFile.Name = "openFile";
             this.openFile.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openFile.Size = new System.Drawing.Size(193, 22);
+            this.openFile.Size = new System.Drawing.Size(194, 22);
             this.openFile.Text = "Open File";
             this.openFile.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(190, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(191, 6);
             // 
             // winLircSettingsToolStripMenuItem
             // 
             this.winLircSettingsToolStripMenuItem.Name = "winLircSettingsToolStripMenuItem";
-            this.winLircSettingsToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.winLircSettingsToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.winLircSettingsToolStripMenuItem.Text = "Settings";
             this.winLircSettingsToolStripMenuItem.Click += new System.EventHandler(this.winLircSettingsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(190, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(191, 6);
             // 
             // exit
             // 
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(193, 22);
+            this.exit.Size = new System.Drawing.Size(194, 22);
             this.exit.Text = "Exit";
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
@@ -194,7 +196,7 @@ namespace VLCTestApp
             this.wakeOnLanToolStripMenuItem});
             this.controlToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.controlToolStripMenuItem.Name = "controlToolStripMenuItem";
-            this.controlToolStripMenuItem.Size = new System.Drawing.Size(54, 17);
+            this.controlToolStripMenuItem.Size = new System.Drawing.Size(59, 19);
             this.controlToolStripMenuItem.Text = "Actions";
             this.controlToolStripMenuItem.Click += new System.EventHandler(this.controlToolStripMenuItem_Click);
             // 
@@ -242,44 +244,44 @@ namespace VLCTestApp
             this.muteToolStripMenuItem});
             this.controlToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.controlToolStripMenuItem1.Name = "controlToolStripMenuItem1";
-            this.controlToolStripMenuItem1.Size = new System.Drawing.Size(54, 17);
+            this.controlToolStripMenuItem1.Size = new System.Drawing.Size(59, 19);
             this.controlToolStripMenuItem1.Text = "Control";
             // 
             // nextChannelToolStripMenuItem
             // 
             this.nextChannelToolStripMenuItem.Name = "nextChannelToolStripMenuItem";
-            this.nextChannelToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.nextChannelToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.nextChannelToolStripMenuItem.Text = "Up Channel                  [Up]";
             this.nextChannelToolStripMenuItem.Click += new System.EventHandler(this.nextChannelToolStripMenuItem_Click);
             // 
             // previuseToolStripMenuItem
             // 
             this.previuseToolStripMenuItem.Name = "previuseToolStripMenuItem";
-            this.previuseToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.previuseToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.previuseToolStripMenuItem.Text = "Down Channel             [Down]";
             this.previuseToolStripMenuItem.Click += new System.EventHandler(this.previuseToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(225, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(227, 6);
             // 
             // stopRecordSToolStripMenuItem
             // 
             this.stopRecordSToolStripMenuItem.Name = "stopRecordSToolStripMenuItem";
-            this.stopRecordSToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.stopRecordSToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.stopRecordSToolStripMenuItem.Text = "Record Local";
             this.stopRecordSToolStripMenuItem.Click += new System.EventHandler(this.stopRecordSToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(225, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(227, 6);
             // 
             // muteToolStripMenuItem
             // 
             this.muteToolStripMenuItem.Name = "muteToolStripMenuItem";
-            this.muteToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.muteToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.muteToolStripMenuItem.Text = "Mute                            [M]";
             this.muteToolStripMenuItem.Click += new System.EventHandler(this.muteToolStripMenuItem_Click);
             // 
@@ -287,7 +289,7 @@ namespace VLCTestApp
             // 
             this.aboutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(48, 17);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 19);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -317,12 +319,22 @@ namespace VLCTestApp
             // chan_menu
             // 
             this.chan_menu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chan_menu.Location = new System.Drawing.Point(0, 21);
+            this.chan_menu.Location = new System.Drawing.Point(0, 23);
             this.chan_menu.Name = "chan_menu";
-            this.chan_menu.Size = new System.Drawing.Size(564, 440);
+            this.chan_menu.Size = new System.Drawing.Size(564, 438);
             this.chan_menu.TabIndex = 0;
             this.chan_menu.Text = "chan_menu";
             this.chan_menu.Child = this.flowControl1;
+            // 
+            // iptv_menu
+            // 
+            this.iptv_menu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iptv_menu.Location = new System.Drawing.Point(0, 23);
+            this.iptv_menu.Name = "iptv_menu";
+            this.iptv_menu.Size = new System.Drawing.Size(564, 438);
+            this.iptv_menu.TabIndex = 50;
+            this.iptv_menu.Text = "iptv_menu";
+            this.iptv_menu.Child = this.flowControl2;
             // 
             // ViewVideo
             // 
@@ -330,6 +342,7 @@ namespace VLCTestApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(564, 461);
+            this.Controls.Add(this.iptv_menu);
             this.Controls.Add(this.chan_menu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -391,6 +404,8 @@ namespace VLCTestApp
         private System.Windows.Forms.ToolStripMenuItem winLircSettingsToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem mediaStramsToolStripMenuItem;
+        private System.Windows.Forms.Integration.ElementHost iptv_menu;
+        private Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.FlowControl flowControl2;
 
     }
 }
