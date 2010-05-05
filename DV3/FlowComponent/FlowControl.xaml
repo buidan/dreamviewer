@@ -1,4 +1,5 @@
-﻿<UserControl x:Class="Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.FlowControl"
+﻿
+<UserControl x:Class="Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.FlowControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Height="282" Width="490">
@@ -32,5 +33,8 @@
         </ModelVisual3D>
       </Viewport3D.Children>
     </Viewport3D>
-  </Grid>
+        <WebBrowser x:Name="wbMain" Margin="30,0,5,30" HorizontalAlignment="Right" Width="230" Height="275">
+        </WebBrowser>
+
+    </Grid>
 </UserControl>
