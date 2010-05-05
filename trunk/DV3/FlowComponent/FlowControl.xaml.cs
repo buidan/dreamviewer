@@ -4,6 +4,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
+using System;
+using System.Windows;
 namespace Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent
 {
     public partial class FlowControl : UserControl
@@ -56,6 +58,9 @@ namespace Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent
 
         public void Load(string imagePath, string type)
         {
+
+            wbMain.NavigateToString("<!-- saved from url=(0014)about:internet -->\n\r<html><head><style type=\"text/css\">\n\rbody  {background-color:black}\n\r</style></head><body scroll=\"no\"><iframe src=\"http://tv.phazer.info/phazerbox/9/&css=http://tv.phazer.info/css/v3/livada.pondi.css\" allowtransparency=\"true\" width=\"210\" height=\"250\" frameborder=\"0\" marginwidth=\"0\"  marginheight=\"0\" scrolling=\"no\" style=\"color:black\"></iframe></body></html>");
+                
             index = 0;
             coverList.Clear();
             var imageDir = new DirectoryInfo(imagePath);
