@@ -166,3 +166,30 @@ C:\Users\kuca\Desktop\DreamViewer\obj\Debug\VLCTestApp.Settings.WinLircSettingsD
 C:\Users\kuca\Desktop\DreamViewer\obj\Debug\VLCTestApp.ViewVideo.resources
 C:\Users\kuca\Desktop\DreamViewer\obj\Debug\VLCTestApp.WoLDialog.resources
 C:\Users\kuca\Desktop\DreamViewer\obj\Debug\DreamViewer.csproj.GenerateResource.Cache
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\Interop.AXVLC.dll
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\AxInterop.AXVLC.dll
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\DreamViewer.csproj.ResolveComReference.cache
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\DreamViewer.exe
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\DreamViewer.pdb
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\bin\Debug\DreamViewer.exe
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\bin\Debug\DreamViewer.pdb
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\bin\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.dll
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\bin\Debug\UsbLibrary.xml
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\bin\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.pdb
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\bin\Debug\Interop.AXVLC.dll
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\bin\Debug\AxInterop.AXVLC.dll
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\VLCTestApp.OpenLocation.resources
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\VLCTestApp.OpenLink.resources
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\VLCTestApp.OSD.HotKeyOsdChild.resources
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\VLCTestApp.OSD.OSDChanList.resources
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\VLCTestApp.OSD.OSDInfo.resources
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\VLCTestApp.Properties.Resources.resources
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\VLCTestApp.Settings.WinLircSettingsDlg.resources
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\VLCTestApp.ViewVideo.resources
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\VLCTestApp.WoLDialog.resources
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\DreamViewer.csproj.GenerateResource.Cache
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\bin\Debug\Interop.WinLIRCClientControl.dll
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\bin\Debug\AxInterop.WinLIRCClientControl.dll
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\Interop.WinLIRCClientControl.dll
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\obj\Debug\AxInterop.WinLIRCClientControl.dll

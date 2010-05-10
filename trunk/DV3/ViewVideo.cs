@@ -35,6 +35,15 @@ namespace VLCTestApp {
         private OSD.OSDInfo oi;
         private Settings.Settings AppSettings;
 
+        Queue ir_commands = new Queue();
+
+        class IrCommand
+        {
+            public string Command;
+            public TimeSpan DeltaTime;
+            public DateTime TimeStamp;
+        };
+
         protected override void WndProc(ref Message m) {
             if (m.Msg == 0x0312)
                 switch ((int)m.WParam) {
@@ -138,7 +147,8 @@ namespace VLCTestApp {
             vlc.AddTarget(stream);
             vlc.Play();
 
-            if (isFull()) oc.Hide(); else chan_menu.Hide();
+            chan_menu.Hide();
+            iptv_menu.Hide();
             isIPTV = false;
         }
         private void initializHotKeys() {
@@ -198,11 +208,66 @@ namespace VLCTestApp {
             vlc.AddTarget(AppSettings.RtmpAddress);
             vlc.Play();
 
-            initializeRemote();
+            initializeRemoteLirc();
+           // initializeRemote();
 
             Size formrect = SystemInformation.PrimaryMonitorSize;
             //oi.Location = new Point((formrect.Height / 2)-(oi.Height/2), formrect.Width - oi.Width +70);
 
+        }
+
+        private void initializeRemoteLirc()
+        {
+            string addr = AppSettings.Addr;
+            int port = Convert.ToInt32(AppSettings.Port);
+            axWinLIRC1.Connect(ref addr,ref port);
+        }
+
+        private void axWinLIRC1_ReceiveIR(object sender, AxWinLIRCClientControl.__WinLIRC_ReceiveIREvent e)
+        {
+            // Enqueue
+            IrCommand ircmd = new IrCommand();
+            ircmd.Command = e.sButton;
+            ircmd.TimeStamp = DateTime.Now;
+            if (ir_commands.Count > 0)
+            {
+                ircmd.DeltaTime = DateTime.Now - ((IrCommand)ir_commands.Peek()).TimeStamp;
+            }
+            else
+            {
+                ircmd.DeltaTime = new TimeSpan(0);
+            }
+            ir_commands.Enqueue(ircmd);
+
+            // Dequeue
+            while (ir_commands.Count > 1)
+            {
+                ircmd = (IrCommand)ir_commands.Dequeue();
+                if (ircmd.DeltaTime.TotalMilliseconds > 250)
+                {
+                    switch (ircmd.Command)
+                    {
+                        case "left":
+                            flowPrevious();
+                            break;
+                        case "right":
+                            flowNext();
+                            break;
+                        case "iptv":
+                            mediaStramsToolStripMenuItem_Click(this, null);
+                            break;
+                        case "vod":
+                            videoOnDemandList();
+                            break;
+                        case "ok":
+                            flowOK();
+                            break;
+                        case "off":
+                            appExitTimer.Enabled = true;
+                            break;
+                    }
+                }
+            }
         }
 
         private void initializeRemote() {
@@ -574,8 +639,8 @@ namespace VLCTestApp {
             try {
                 if (iptv_menu.Visible)
                 {
-                    string loc = flowControl2.GetCurrImage();
-                    OpenStream("udp://@" + loc + ":5000");
+                    string loc = flowControl2.GetCurrImage().Replace(".png","");
+                    OpenStream("udp://@" + loc + ":1234");
                 }
                 if (chan_menu.Visible || oc.Visible) {
                     string loc = (isFull())
@@ -603,5 +668,13 @@ namespace VLCTestApp {
                 iptv_menu.Show();
             }
         }
+
+        private void appExitTimer_Tick(object sender, EventArgs e)
+        {
+            appExitTimer.Enabled = false;
+            this.Close();
+        }
+
+
     }
 }
