@@ -70,3 +70,12 @@ C:\Users\kuca\Desktop\DreamViewer\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.Cover
 C:\Users\kuca\Desktop\DreamViewer\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.g.resources
 C:\Users\kuca\Desktop\DreamViewer\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.dll
 C:\Users\kuca\Desktop\DreamViewer\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.pdb
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\FlowComponent\bin\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.dll
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\FlowComponent\bin\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.pdb
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\FlowComponent\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\FlowComponent\obj\Debug\FlowControl.baml
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\FlowComponent\obj\Debug\FlowControl.g.cs
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent_MarkupCompile.cache
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.g.resources
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.dll
+D:\Documents and Settings\ETF-TK\Desktop\IPTV\FlowComponent\obj\Debug\Ded.Tutorial.Wpf.CoverFlow.Part5.FlowComponent.pdb
